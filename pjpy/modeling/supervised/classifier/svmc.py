@@ -2,10 +2,10 @@ from numpy.random import uniform
 from sklearn.svm import SVC
 
 from pjdata.aux.decorator import classproperty
-from pjautoml.config.description.cs.cs import CS
-from pjautoml.config.description.distributions import choice
-from pjautoml.config.description.node import Node
-from pjautoml.config.description.parameter import FixedP, IntP, RealP, CatP, OrdP
+from pjml.config.description.cs.cs import CS
+from pjml.config.description.distributions import choice
+from pjml.config.description.node import Node
+from pjml.config.description.parameter import FixedP, IntP, RealP, CatP, OrdP
 from pjpy.modeling.supervised.predictor import Predictor
 
 

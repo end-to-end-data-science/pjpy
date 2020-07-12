@@ -4,9 +4,9 @@ from numpy.random.mtrand import uniform
 from sklearn.decomposition import PCA as SKLPCA
 
 import pjdata.types as t
-from pjautoml.config.description.cs.cs import CS
-from pjautoml.config.description.node import Node
-from pjautoml.config.description.parameter import RealP, FixedP
+from pjml.config.description.cs.cs import CS
+from pjml.config.description.node import Node
+from pjml.config.description.parameter import RealP, FixedP
 from pjpy.algorithm import TSKLAlgorithm
 
 

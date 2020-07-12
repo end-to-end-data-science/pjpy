@@ -5,8 +5,8 @@ from sklearn.preprocessing import OneHotEncoder
 
 from pjdata import types as t
 from pjdata.data_creation import nominal_idxs
-from pjautoml.config.description.cs.abc.configspace import ConfigSpace
-from pjautoml.config.description.cs.emptycs import EmptyCS
+from pjml.config.description.cs.abc.configspace import ConfigSpace
+from pjml.config.description.cs.emptycs import EmptyCS
 from pjml.tool.abs.component import Component
 
 

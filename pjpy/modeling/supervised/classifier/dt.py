@@ -1,9 +1,9 @@
 from sklearn.tree import DecisionTreeClassifier
 
-from pjautoml.config.description.cs.cs import CS
-from pjautoml.config.description.distributions import choice, uniform
-from pjautoml.config.description.node import Node
-from pjautoml.config.description.parameter import CatP, FixedP, IntP, RealP
+from pjml.config.description.cs.cs import CS
+from pjml.config.description.distributions import choice, uniform
+from pjml.config.description.node import Node
+from pjml.config.description.parameter import CatP, FixedP, IntP, RealP
 from pjpy.modeling.supervised.predictor import Predictor
 
 
