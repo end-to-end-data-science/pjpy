@@ -1,11 +1,11 @@
 from numpy.random import uniform
 from sklearn.svm import SVC
 
+from pjautoml.cs.operand.graph.graph import Graph
+from pjautoml.cs.operand.graph.node import Node
 from pjdata.aux.decorator import classproperty
-from pjml.config.description.cs.cs import CS
-from pjml.config.description.distributions import choice
-from pjml.config.description.node import Node
-from pjml.config.description.parameter import FixedP, IntP, RealP, CatP, OrdP
+from pjml.util.distributions import choice
+from pjautoml.util.parameter import FixedP, IntP, RealP, CatP, OrdP
 from pjpy.modeling.supervised.predictor import Predictor
 
 
@@ -86,4 +86,4 @@ class SVMC(Predictor):
             children=[kernel_linear, kernel_nonlinear],
         )
 
-        return CS(nodes=[top])
+        return Graph(nodes=[top])
