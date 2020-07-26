@@ -1,9 +1,9 @@
 from sklearn.tree import DecisionTreeClassifier
 
-from pjml.config.description.cs.cs import CS
-from pjml.config.description.distributions import choice, uniform
-from pjml.config.description.node import Node
-from pjml.config.description.parameter import CatP, FixedP, IntP, RealP
+from pjml.util.distributions import choice, uniform
+from pjautoml.cs.operand.graph.graph import Graph
+from pjautoml.cs.operand.graph.node import Node
+from pjautoml.util.parameter import CatP, FixedP, IntP, RealP
 from pjpy.modeling.supervised.predictor import Predictor
 
 
@@ -28,4 +28,4 @@ class DT(Predictor):
             "min_weight_fraction_leaf": RealP(uniform, low=0.0, high=0.3),
             "min_impurity_decrease": RealP(uniform, low=0.0, high=0.2),
         }
-        return CS(nodes=[Node(params=params)])
+        return Graph(nodes=[Node(params=params)])
