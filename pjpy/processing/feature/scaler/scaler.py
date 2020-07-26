@@ -4,7 +4,7 @@
 #
 # from pjml.tool.abc.transformer import Transformer
 # from pjml.tool.data.algorithm import HeavyAlgorithm
-# from pjml.tool.model.model import Model
+# from pjml.model.model import Model
 #
 #
 # class Scaler(HeavyAlgorithm, ABC):
