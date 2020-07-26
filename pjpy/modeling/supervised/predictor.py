@@ -3,7 +3,7 @@ from functools import lru_cache
 from typing import Callable, Any, Dict
 
 import pjdata.types as t
-from pjml.tool.abs.mixin.defaultenhancerimpl import withDefaultEnhancerImpl
+from pjml.abs.mixin.defaultenhancerimpl import withDefaultEnhancerImpl
 from pjpy.algorithm import TSKLAlgorithm
 
 
