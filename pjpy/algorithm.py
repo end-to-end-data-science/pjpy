@@ -1,7 +1,7 @@
 from abc import ABC
 from functools import partial
 
-from pjml.tool.abs.component import Component
+from pjautoml.abs.component import Component
 
 
 class TSKLAlgorithm(Component, ABC):
