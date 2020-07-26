@@ -5,9 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 from pjdata import types as t
 from pjdata.data_creation import nominal_idxs
-from pjml.config.description.cs.abc.configspace import ConfigSpace
-from pjml.config.description.cs.emptycs import EmptyCS
-from pjml.tool.abs.component import Component
+from pjml.abs.component import Component
 
 
 class Binarize(Component):
@@ -43,7 +41,3 @@ class Binarize(Component):
 
     def _model_func(self, data: t.Data) -> t.Transformation:
         return self._enhancer_func()
-
-    @classmethod
-    def _cs_impl(cls) -> ConfigSpace:
-        return EmptyCS()
