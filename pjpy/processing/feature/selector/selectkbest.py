@@ -12,16 +12,17 @@
 # from pjml.tool.abc.mixin.exceptionhandler import BadComponent
 # from pjml.tool.data.algorithm import HeavyAlgorithm
 # from pjml.tool.model.model import Model
+# from pjpy.algorithm import TSKLAlgorithm
 #
 #
-# class SelectBest(HeavyAlgorithm):
+# class SelectBest(TSKLAlgorithm):
 #     SCORE_FUNCTIONS = {
 #         "chi2": chi2,
 #         "f_classif": f_classif,
 #         "mutual_info_classif": mutual_info_classif
 #     }
 #
-#     def __init__(self, score_func, k_perc, seed=0, **kwargs):
+#     def __init__(self, score_func: str = "chi2", k_perc: int = 0.8, enhance: bool = True, model: bool = True):
 #         sklearn_score = self.SCORE_FUNCTIONS[score_func]
 #
 #         def algorithm_factory(nfeatures, random_state):
@@ -33,7 +34,7 @@
 #                 k=int(np.ceil(nfeatures * k_perc))
 #             )
 #
-#         config = {'score_func': score_func, 'k_perc': k_perc, 'seed': seed}
+#         config = {'score_func': score_func, 'k_perc': k_perc}
 #         if score_func != 'mutual_info_classif':
 #             del config['seed']
 #         super().__init__(config, algorithm_factory, {}, **kwargs)
