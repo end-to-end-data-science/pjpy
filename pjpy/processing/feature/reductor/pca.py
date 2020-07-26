@@ -4,9 +4,10 @@ from numpy.random.mtrand import uniform
 from sklearn.decomposition import PCA as SKLPCA
 
 import pjdata.types as t
-from pjml.config.description.cs.cs import CS
-from pjml.config.description.node import Node
-from pjml.config.description.parameter import RealP, FixedP
+from pjautoml.cs.cs import CS
+from pjautoml.cs.operand.graph.graph import Graph
+from pjautoml.cs.operand.graph.node import Node
+from pjautoml.util.parameter import RealP
 from pjpy.algorithm import TSKLAlgorithm
 
 
@@ -54,10 +55,10 @@ class PCA(TSKLAlgorithm):
         # todo: set random seed; set 'cache_size'
         param = {
             "n": RealP(uniform, low=0.0, high=1.0),
-            "copy": FixedP(True),
-            "whiten": FixedP(False),
-            "svd_solver": FixedP("auto"),
-            "tol": FixedP(0.0),
-            "iterated_power": FixedP("auto"),
+            # "copy": FixedP(True),
+            # "whiten": FixedP(False),
+            # "svd_solver": FixedP("auto"),
+            # "tol": FixedP(0.0),
+            # "iterated_power": FixedP("auto"),
         }
-        return CS(nodes=[Node(param)])
+        return Graph(nodes=[Node(param)])
